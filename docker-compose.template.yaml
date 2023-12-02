@@ -1,0 +1,25 @@
+version: "3"
+#
+# NOTE: This file is generated automatically. Modify docker-compose.template.yaml instead
+#
+services:
+  nginx:
+    build:
+      context: ./nginx
+      args:
+        STAGE: ${STAGE}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/logs:/var/log/nginx
+      - ./nginx/ssl:/ssl
+    networks:
+      proxy_network:
+        aliases:
+          - ${COMMON_NAME}
+    environment:
+      - COMMON_NAME=${COMMON_NAME}
+
+networks:
+  proxy_network: # network used by the proxy

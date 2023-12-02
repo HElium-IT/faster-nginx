@@ -1,0 +1,12 @@
+# Credentials
+.git-token
+.git-credential
+
+# Generated Folders
+nginx/ssl
+
+# Generated Files
+docker-compose.yaml
+
+# Logging
+nginx/logs

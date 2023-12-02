@@ -1,0 +1,48 @@
+{
+  "git_access_token_file": ".git-token",
+  "gitlab_url": "gitlab.intranet.bit4id.com",
+  "repositories": [
+    {
+      "alias": "web",
+      "name": "angularApp",
+      "url": "https://gitlab.intranet.bit4id.com/metafora/decentraland-frontend"
+    },
+    {
+      "alias": "api",
+      "name": "fastApi",
+      "url": "https://gitlab.intranet.bit4id.com/metafora/decentraland-api"
+    }
+  ],
+  "stages": [
+    {
+      "alias": "dev",
+      "common_name": "dev.mystack.com",
+      "docker_compose_file": "docker-compose.dev-template.yaml",
+      "repositories": [
+        {
+          "alias": "web",
+          "branch": "develop"
+        },
+        {
+          "alias": "api",
+          "branch": "develop"
+        }
+      ]
+    },
+    {
+      "alias": "prod",
+      "common_name": "mystack.com",
+      "docker_compose_file": "docker-compose.prod-template.yaml",
+      "repositories": [
+        {
+          "alias": "web",
+          "branch": "master"
+        },
+        {
+          "alias": "api",
+          "branch": "master"
+        }
+      ]
+    }
+  ]
+}

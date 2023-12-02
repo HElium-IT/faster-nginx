@@ -1,0 +1,24 @@
+{
+  "git_access_token_file": ".git-token",
+  "gitlab_url": "gitlab.intranet.bit4id.com",
+  "repositories": [
+    {
+      "alias": "",
+      "name": "",
+      "url": ""
+    }
+  ],
+  "stages": [
+    {
+      "alias": "dev",
+      "common_name": "dev.mystack.com",
+      "docker_compose_file": "docker-compose.dev-template.yaml",
+      "repositories": [
+        {
+          "alias": "",
+          "branch": ""
+        }
+      ]
+    }
+  ]
+}
